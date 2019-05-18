@@ -4,5 +4,6 @@
     "editor.formatOnSave": true,
     "python.testing.pyTestEnabled": true,
     "python.linting.mypyEnabled": true,
-    "python.linting.pylamaEnabled": true
+    "python.linting.pylamaEnabled": true,
+    "python.formatting.provider": "black"
 }

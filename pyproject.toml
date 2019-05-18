@@ -12,6 +12,7 @@ pytest = "^3.0"
 black = {version = "^18.3-alpha.0",allows-prereleases = true}
 pylama = {version = "^7.7",allows-prereleases = true}
 mypy = {version = "^0.701.0",allows-prereleases = true}
+tox = "^3.11"
 
 [tool.black]
 line-length = 100

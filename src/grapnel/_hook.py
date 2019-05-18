@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import weakref
 
-from typing import Any, Callable
+from typing import Any, Callable, Union, List
 
 
 class BoundHook(object):
@@ -26,7 +26,7 @@ class BoundHook(object):
         super(BoundHook, self).__init__()
 
         self._default_data_value_ref = None
-        self._handler_refs = []
+        self._handler_refs: List[Union[weakref.ReferenceType, weakref.WeakMethod]] = []
 
         self._default_data_value = default_data_value
 
@@ -84,7 +84,7 @@ class Hook(object):
     def __init__(self, default_data_value: Any = None):
         super(Hook, self).__init__()
 
-        self._bound_hooks = weakref.WeakKeyDictionary()
+        self._bound_hooks: weakref.WeakKeyDictionary[Any, BoundHook] = weakref.WeakKeyDictionary()
         self._default_data_value = default_data_value
 
     def __get__(self, instance, owner=None):

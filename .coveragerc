@@ -1,0 +1,9 @@
+[run]
+branch = true
+source = grapnel
+
+[paths]
+source =
+    src/grapnel
+    .tox/*/lib/python*/site-packages/grapnel
+    .tox/pypy*/site-packages/grapnel

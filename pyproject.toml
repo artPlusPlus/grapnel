@@ -14,10 +14,11 @@ pylama = {version = "^7.7",allows-prereleases = true}
 mypy = {version = "^0.701.0",allows-prereleases = true}
 tox = "^3.11"
 coverage = "^4.5"
+tox-venv = "^0.4.0"
 
 [tool.black]
 line-length = 100
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry==0.12"]
 build-backend = "poetry.masonry.api"

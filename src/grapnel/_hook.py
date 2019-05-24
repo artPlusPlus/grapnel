@@ -102,4 +102,6 @@ class Hook(object):
     def __set__(self, instance, value):
         if self._bound_hooks.get(instance) is value:
             return
-        raise ValueError()
+        raise ValueError(
+            "Hooks cannot be set. Use the '+=' operator to assign a callback to the hook."
+        )

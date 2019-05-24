@@ -1,11 +1,11 @@
 from typing import Any
 
 
-class HookDataBase(object):
+class BaseHookData(object):
     pass
 
 
-class ValueChangedHookData(HookDataBase):
+class ValueChangedHookData(BaseHookData):
     @property
     def original_value(self) -> Any:
         return self._original_value

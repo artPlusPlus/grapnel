@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "grapnel"
 version = "0.2.0"
-description = ""
+description = "Add hooks to your python classes."
 authors = ["artPlusPlus <artPlusPlus@users.noreply.github.com>"]
+license = "MPL2"
+readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.7"

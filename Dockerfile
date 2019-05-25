@@ -18,8 +18,9 @@ RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poet
 
 WORKDIR /usr/grapnel
 
-COPY pyproject.toml .
-COPY poetry.lock .
+COPY ./pyproject.toml .
+COPY ./poetry.lock .
+COPY ./README.rst .
 
 RUN poetry config settings.virtualenvs.create false 
 RUN poetry install $(test "GRAPNEL_ENV" == production && echo "--no-dev") --no-interaction --no-ansi

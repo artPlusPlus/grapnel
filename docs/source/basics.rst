@@ -11,7 +11,8 @@ Consider a class describing a ``Person``:
     :linenos:
 
 It would be really valuable if other parts of the code base could hook into instances of ``Person``
-and respond when the values of their ``name`` properties change.
+and respond when the values of their ``name`` properties change. Grapnel's ``Hook`` object provides
+this capability.
 
 In order to use ``Hooks``, they must be imported from Grapnel::
 

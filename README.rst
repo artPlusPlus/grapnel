@@ -1,4 +1,8 @@
-Grapnel
-=======
+What is Grapnel?
+================
 
-Grapnel is a library that provides Python classes with Hooks. Hooks allow other parts of the codebase to register functions or methods as callbacks. When a Hook is triggered by an instance of the class, the callbacks are invoked.
+Grapnel is a library enabling Python classes to expose Hooks, which allow other parts of the codebase to respond to state changes.
+
+.. image:: https://readthedocs.org/projects/artplusplusgrapnel/badge/?version=latest
+    :target: https://artplusplusgrapnel.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status

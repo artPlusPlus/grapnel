@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "grapnel"
-version = "0.2.0"
+version = "0.3.0"
 description = "Add hooks to your python classes."
 authors = ["artPlusPlus <artPlusPlus@users.noreply.github.com>"]
 license = "MPL2"
@@ -17,6 +17,8 @@ mypy = {version = "^0.701.0",allows-prereleases = true}
 tox = "^3.11"
 coverage = "^4.5"
 tox-venv = "^0.4.0"
+sphinx = "^2.0"
+sphinx-autodoc-typehints = "^1.6"
 
 [tool.black]
 line-length = 100

@@ -1,8 +1,6 @@
 from typing import Any
 
-
-class BaseHookData(object):
-    pass
+from ._base_hook_data import BaseHookData
 
 
 class ValueChangedHookData(BaseHookData):

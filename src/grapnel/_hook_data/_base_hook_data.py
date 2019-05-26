@@ -1,0 +1,2 @@
+class BaseHookData(object):
+    pass

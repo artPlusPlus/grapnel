@@ -7,4 +7,6 @@ formats:
   - htmlzip
 
 python:
-  pip_install: true
+  install:
+    - method: pip
+      path: .

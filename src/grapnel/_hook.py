@@ -6,6 +6,10 @@ from typing import Any, Callable, Union, List
 
 
 class BoundHook(object):
+    """
+    `BoundHook`s associate callbacks with specific object instances.
+    """
+
     @property
     def _default_data_value(self):
         if isinstance(self._default_data_value_ref, weakref.ReferenceType):
@@ -30,7 +34,14 @@ class BoundHook(object):
 
         self._default_data_value = default_data_value
 
-    def add_handler(self, handler: Callable) -> None:
+    def add_handler(self, handler: Callable[[Any, Any], None]) -> None:
+        """
+        Adds a handler to the Hook.
+
+        When a ``BoundHook`` is invoked, handlers are called in the order in which they were added.
+        ``BoundHook`` holds only weak references to handlers. Manual cleanup due to handler 
+        lifespan should not be necessary.
+        """
         handler_ref = self._create_handler_ref(handler)
         if not handler_ref:
             msg = "Failed to add handler: Unable to create weak reference."
@@ -38,7 +49,13 @@ class BoundHook(object):
 
         self._handler_refs.append(handler_ref)
 
-    def remove_handler(self, handler: Callable) -> None:
+    def remove_handler(self, handler: Callable[[Any, Any], None]) -> None:
+        """
+        Removes a handler from the Hook.
+
+        ``BoundHook`` holds only weak references to handlers. Manual cleanup due to handler 
+        lifespan should not be necessary.
+        """
         handler_ref = self._create_handler_ref(handler)
         if not handler_ref:
             return
@@ -81,7 +98,23 @@ class BoundHook(object):
 
 
 class Hook(object):
+    """
+    `Hook`s are the primary feature of Grapnel.
+
+    `Hook`s are class-level constructs. A class can have any number of `Hook`s.
+
+    Once a class exposes a `Hook`, callbacks can be attached to the `Hook` via instances
+    of the class.
+    """
+
     def __init__(self, default_data_value: Any = None):
+        """
+        Initializes a new `Hook` instance.
+
+        Args:
+            default_data_value: In the case where a `Hook` is invoked with no data, this value will
+                be passed to any attached callbacks.
+        """
         super(Hook, self).__init__()
 
         self._bound_hooks: weakref.WeakKeyDictionary[Any, BoundHook] = weakref.WeakKeyDictionary()

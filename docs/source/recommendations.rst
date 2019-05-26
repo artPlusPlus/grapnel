@@ -2,7 +2,7 @@
 Recommendations
 ***************
 
-While the ``Person`` class we ended up with at the end of the `Basics` section is funtional,
+While the ``Person`` class we ended up with at the end of the :ref:`Basics <basics-label>` section is funtional,
 there are a few things that can be done to tighten it up a bit.
 
 Let's step back to the original ``Person`` definition:

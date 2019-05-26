@@ -2,7 +2,7 @@
 Recommendations
 ***************
 
-While the ``Person`` class we ended up with at the end of the :ref:`Basics <basics-label>` section is funtional,
+While the ``Person`` class we ended up with at the end of the :ref:`Basics <basics-label>` section is functional,
 there are a few things that can be done to tighten it up a bit.
 
 Let's step back to the original ``Person`` definition:
@@ -85,5 +85,5 @@ Final Result
 
 .. literalinclude:: ../examples/recommendations/person_end.py
     :language: python
-    :emphasize-lines: 1, 5-6, 20, 22, 30-32, 34-36
+    :emphasize-lines: 1, 5-6, 16-17, 20, 22, 30-32, 34-36
     :linenos:

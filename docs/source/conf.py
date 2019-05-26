@@ -21,12 +21,12 @@ from datetime import datetime
 # -- Project information -----------------------------------------------------
 
 project = "Grapnel"
-year = datetime.now().year
-copyright = "{}, Matt Robinson".format(year)
 author = "Matt Robinson"
+year = datetime.now().year
+copyright = "{}, {}".format(year, author)
 
 # The full version, including alpha/beta/rc tags
-release = "v0.2.0"
+release = "v0.3.0"
 
 
 # -- General configuration ---------------------------------------------------

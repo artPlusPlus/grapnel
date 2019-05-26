@@ -1,6 +1,6 @@
-=======
+#######
 Grapnel
-=======
+#######
 
 .. include:: ../../README.rst
 .. include:: quickstart.rst

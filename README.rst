@@ -1,5 +1,6 @@
+****************
 What is Grapnel?
-================
+****************
 
 Grapnel is a library enabling Python classes to expose Hooks, which allow other parts of the codebase to respond to state changes.
 
